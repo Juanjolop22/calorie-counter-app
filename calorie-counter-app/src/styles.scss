@@ -1,0 +1,118 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@mixin make-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin heightAndWidth($height, $width){
+    height: $height;
+    width: $width;
+}
+@mixin gradient($deg, $color1, $color2){
+    background: linear-gradient($deg, $color1, $color2);
+}
+
+html{
+    @include heightAndWidth(100%, 100%);
+    body{
+    @include heightAndWidth(100%, 100%);
+    font-family: 'Poppins', sans-serif;
+    }
+}
+
+main{
+    @include make-flex();
+    @include heightAndWidth(100%, 100%);
+    background-color: rgb(127, 125, 125);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    @include heightAndWidth(95%, 95%);
+    @include gradient(45deg, rgb(221, 252, 221), rgb(243, 240, 240));
+    border-radius: 30px;
+}
+.firstSonContainer{
+    @include make-flex();
+    flex-direction: column;
+    @include heightAndWidth(20%, 100%);
+    h1{
+        margin-top: 1%;
+        font-size: 2rem;
+    }
+}
+
+.searchInfo{
+    margin-top: 2%;
+    @include make-flex();
+    @include heightAndWidth(80%, 100%);
+    .input-container{
+        @include make-flex();
+        justify-content: end;
+        @include heightAndWidth(80%, 70%);
+        #input{
+            @include heightAndWidth(100%, 65%);
+            border-radius: 15px;
+            border:2px solid white;
+            text-align: center;
+            font-size: x-large;
+        }
+    }
+    .inputGrams{
+        height: 100%;
+        width: 30% !important;
+    }
+    .button-container{
+        @include heightAndWidth(80%, 30%);
+        margin-left: 2%;
+        #button{
+            @include heightAndWidth(100%, 20%);
+            border: 2px solid white ;
+            border-radius: 15px;
+            background-color: rgb(218, 216, 216);
+            .fa-search{
+                font-size: 20px;
+            }
+        }
+    }
+    #button:hover{
+        background-color: rgb(94, 93, 93);
+        cursor: pointer;
+        color: white;
+        .fa-search{
+            font-size: 25px;
+        }
+    }
+}
+.secondSonContainer{
+    @include make-flex();
+    @include heightAndWidth(80%, 100%);
+    justify-content: flex-start;
+    font-size: 2em;
+    }
+    .nutritionInfo{
+        display: block;
+        margin-left: 2%;
+        text-align: left;
+        @include heightAndWidth(100%, 40%);
+        flex-direction: column;
+        p{
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        margin-bottom: 1%;
+            span{
+                background-color: rgb(209, 208, 208);
+                border-radius: 10px;
+            }
+    }
+}
+

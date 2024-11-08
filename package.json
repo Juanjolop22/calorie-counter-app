@@ -1,0 +1,20 @@
+{
+  "name": "calorie-counter-app-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass src/styles.scss calorie-counter-app/styles.css"
+  },
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.80.6",
+    "vite": "^5.4.10"
+  }
+}
