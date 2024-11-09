@@ -1,8 +1,7 @@
 import { clickHandler, pressEnterHandler } from "./eventHandlers.js";
 import { displayFoodInfo } from "./displayFoodInfo.js";
-import { selectGramsQuantity } from "./selectGramsQuantity.js";
 
-export async function getNutritionData(foodItem) {
+export async function getNutritionData(foodItem, grams) {
     try{
         const response = await fetch('https://trackapi.nutritionix.com/v2/natural/nutrients',{
             method: 'POST',
@@ -19,9 +18,8 @@ export async function getNutritionData(foodItem) {
         }
         const data = await response.json();
         const nutritionFacts = data.foods[0]; 
-        selectGramsQuantity(foodItem);
-        displayFoodInfo(nutritionFacts, nutritionFacts);
-        console.log(foodItem);
+        console.log(nutritionFacts);
+        displayFoodInfo(nutritionFacts, foodItem, grams);
 
     } catch(error){
         console.error('Hubo un error al obtener los datos:', error);

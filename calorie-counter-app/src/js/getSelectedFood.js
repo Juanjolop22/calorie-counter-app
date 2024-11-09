@@ -1,9 +1,10 @@
-import { getNutritionData } from "./main.js";
+import { selectGramsQuantity } from "./selectGramsQuantity.js";
 
 export const getSelectedFood = (foodItem) =>{
     const input = document.querySelector('#input');
-    console.log(foodItem);
     foodItem = input.value;
+    console.log(foodItem);
     if (!foodItem) return
-    getNutritionData(foodItem);
+    input.value = '';
+    selectGramsQuantity(foodItem);
 }

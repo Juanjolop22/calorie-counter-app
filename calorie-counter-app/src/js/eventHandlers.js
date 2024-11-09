@@ -1,16 +1,16 @@
 import {getSelectedFood } from "./getSelectedFood.js";
 //import { selectGramsQuantity } from "./selectGramsQuantity.js";
 
-export const clickHandler = (foodItem) =>{
+export const clickHandler = () =>{
     document.querySelector('#button').addEventListener('click', () => {
-        getSelectedFood(foodItem);
+        getSelectedFood();
          })
  }
 
- export const pressEnterHandler = (foodItem) =>{
+ export const pressEnterHandler = () =>{
         document.querySelector('#input').addEventListener("keydown", (event) =>{
         if(event.key === "Enter"){
-        getSelectedFood(foodItem);
+        getSelectedFood();
         }
      })
  }
