@@ -1,6 +1,8 @@
 import { getNutritionData } from "./main.js";
+import { clickSendGrams} from "./eventHandlers.js";
 
 export const selectGramsQuantity = (foodItem) =>{
+    if(!foodItem) return
     const h1 = document.querySelector('h1');
     h1.classList.add('foodTitle');
     const foodTitle = document.querySelector('.foodTitle');
@@ -8,13 +10,11 @@ export const selectGramsQuantity = (foodItem) =>{
     const input = document.querySelector('#input');
     input.classList.add('inputGrams');
     input.value = '';
-    input.focus();
-    listenToInput(input, h1, foodItem);
+    replaceButton();
+    clickSendGrams(input, h1, foodItem);
 }
 
-
-const listenToInput = (input, h1, foodItem) =>{
-    input.addEventListener('change', ()=>{
+export const getGrams = (input, h1, foodItem) =>{
         const grams = parseFloat(input.value);
         if (isNaN(grams)) return
         input.value ='';
@@ -23,5 +23,17 @@ const listenToInput = (input, h1, foodItem) =>{
         h1.innerHTML = 'Calcula las calorias de lo que vas a comer.';
         getNutritionData(foodItem, grams);
         if(foodItem) return
-  })
 }
+
+const replaceButton = () =>{
+    const button = document.querySelector('button');
+    const buttonGrams = document.createElement('button');
+    buttonGrams.innerHTML = '<i class="fas fa-search"></i>';
+    buttonGrams.classList.add('button-grams');
+    if (button) {
+        button.replaceWith(buttonGrams);
+    } else {
+        console.error('No se encontró el botón para reemplazar.');
+    }
+}
+

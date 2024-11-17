@@ -1,4 +1,4 @@
-import { clickHandler, pressEnterHandler } from "./eventHandlers.js";
+import { clickSendFoodName, EnterHandlerFoodName} from "./eventHandlers.js";
 import { displayFoodInfo } from "./displayFoodInfo.js";
 
 export async function getNutritionData(foodItem, grams) {
@@ -27,5 +27,5 @@ export async function getNutritionData(foodItem, grams) {
     };
 }
 
-clickHandler();
-pressEnterHandler();
+clickSendFoodName();
+EnterHandlerFoodName();
