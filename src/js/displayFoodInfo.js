@@ -1,3 +1,4 @@
+import { addEachMeal } from "./addEachMeal.js";
 export const displayFoodInfo = (nutritionFacts, foodItem, grams) =>{
     const portionsPerFoodItem = nutritionFacts.serving_weight_grams;
     const format = (value) => value.toFixed(2);
@@ -16,13 +17,14 @@ export const displayFoodInfo = (nutritionFacts, foodItem, grams) =>{
                             <p> carbohidratos totales: <span>${format(nutritionFacts.nf_total_carbohydrate / portionsPerFoodItem * grams)}</span></p>
                             <p> grasa total: <span>${format(nutritionFacts.nf_total_fat / portionsPerFoodItem * grams)}</span></p>
                              </div>`;
-    addingFoodButton(nutrientsInfo);
+    addFoodToListButton(nutrientsInfo, addEachMeal, foodItem);
 }
 
-const addingFoodButton = (nutrientsInfo) =>{
+const addFoodToListButton = (nutrientsInfo, callBack, foodItem) =>{
     const buttonAddFood = document.createElement('button');
     buttonAddFood.classList.add('addFoodButton');
     buttonAddFood.innerHTML = 'Agregar Alimento';
+    buttonAddFood.addEventListener('click', () => callBack(foodItem, nutrientsInfo));
     nutrientsInfo.append(buttonAddFood);
 }
 

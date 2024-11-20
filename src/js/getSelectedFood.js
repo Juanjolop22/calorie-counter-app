@@ -5,7 +5,6 @@ export const getSelectedFood = (foodItem) =>{
     foodItem = input.value;
     if (!foodItem) return
     console.log(foodItem)
-
     input.value = '';
     selectGramsQuantity(foodItem);
 }

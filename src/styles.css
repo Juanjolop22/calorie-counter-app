@@ -25,6 +25,7 @@ main {
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   background: linear-gradient(45deg, rgb(221, 252, 221), rgb(243, 240, 240));
@@ -130,6 +131,7 @@ main {
   height: 90%;
   width: 100%;
   flex-direction: column;
+  overflow: auto;
 }
 .nutritionInfo h2 {
   font-size: 42px;
@@ -155,9 +157,32 @@ main {
   font-size: 2rem;
   height: 10%;
   width: 30%;
+  margin-top: 5%;
 }
 
 .addFoodButton:hover {
   background-color: rgb(206, 204, 204);
   color: rgb(206, 249, 206);
+}
+
+.meal-list {
+  font-size: 2em;
+  height: 80%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+}
+.meal-list h3 {
+  font-size: 42px;
+}
+
+.secondContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

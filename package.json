@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass src/styles.scss calorie-counter-app/styles.css"
+    "build-css": "sass src/styles.scss calorie-counter-app/styles.css",
+    "preview": "vite preview"
   },
   
   "keywords": [],

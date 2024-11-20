@@ -35,6 +35,7 @@ main{
 .container{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     @include heightAndWidth(100%, 100%);
     @include gradient(45deg, rgb(221, 252, 221), rgb(243, 240, 240));
 }
@@ -119,6 +120,7 @@ main{
         text-align: left;
         @include heightAndWidth(90%, 100%);
         flex-direction: column;
+        overflow: auto;
         h2{
             font-size:42px;
         }
@@ -142,9 +144,25 @@ main{
     color: rgb(31, 112, 31);
     font-size: 2rem;
     @include heightAndWidth(10%, 30%);
+    margin-top: 5%;
 }
 .addFoodButton:hover{
     background-color: rgb(206, 204, 204);
     color: rgb(206, 249, 206);
+}
+
+.meal-list{
+    h3{
+        font-size:42px;
+    }
+    font-size: 2em;
+    @include heightAndWidth(80%, 50%);
+    @include make-flex();
+    flex-direction: column;
+    justify-content: start;
+}
+.secondContainer{
+    @include make-flex();
+    @include heightAndWidth(80%, 100%);
 }
 

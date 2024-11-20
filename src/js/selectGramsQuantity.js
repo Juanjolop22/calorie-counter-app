@@ -9,7 +9,6 @@ export const selectGramsQuantity = (foodItem) =>{
     foodTitle.innerHTML = `¿cuantos gramos de ${foodItem} vas a consumir?`;
     const input = document.querySelector('#input');
     input.classList.add('inputGrams');
-    input.value = '';
     replaceButton();
     clickSendGrams(input, h1, foodItem);
 }
