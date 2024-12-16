@@ -1,4 +1,5 @@
 import { addEachMeal } from "./addEachMeal.js";
+import { getSelectedFood } from "./getSelectedFood.js";
 export const displayFoodInfo = (nutritionFacts, foodItem, grams) =>{
     const portionsPerFoodItem = nutritionFacts.serving_weight_grams;
     const format = (value) => value.toFixed(2);
@@ -17,16 +18,38 @@ export const displayFoodInfo = (nutritionFacts, foodItem, grams) =>{
                             <p> carbohidratos totales: <span>${format(nutritionFacts.nf_total_carbohydrate / portionsPerFoodItem * grams)}</span></p>
                             <p> grasa total: <span>${format(nutritionFacts.nf_total_fat / portionsPerFoodItem * grams)}</span></p>
                              </div>`;
-    addFoodToListButton(nutrientsInfo, addEachMeal, foodItem);
+                             
+    addFoodToListButton(nutrientsInfo, addEachMeal, foodItem, grams);
+    newFoodButton(foodItem);
+
 }
 
-const addFoodToListButton = (nutrientsInfo, callBack, foodItem) =>{
+const addFoodToListButton = (nutrientsInfo, callBack, foodItem, grams) =>{
     const buttonAddFood = document.createElement('button');
     buttonAddFood.classList.add('addFoodButton');
     buttonAddFood.innerHTML = 'Agregar Alimento';
-    buttonAddFood.addEventListener('click', () => callBack(foodItem, nutrientsInfo));
+    buttonAddFood.addEventListener('click', () => {
+        callBack(foodItem, grams)
+
+    });
     nutrientsInfo.append(buttonAddFood);
+
 }
+
+const newFoodButton = (foodItem) =>{
+    const createNewFoodButton = document.createElement('button');
+    createNewFoodButton.classList.add('newFoodButton');
+    createNewFoodButton.innerHTML = '<i class="fas fa-search"></i>';
+    createNewFoodButton.addEventListener('click', () =>{
+        getSelectedFood(foodItem, input);
+    })
+    const existCreateNewfoodButton = document.querySelector('.newFoodButton');
+    if (existCreateNewfoodButton) return
+    document.querySelector('.button-grams').replaceWith(createNewFoodButton);
+}
+
+    
+
 
 
 

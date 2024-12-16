@@ -1,6 +1,5 @@
 import {getSelectedFood } from "./getSelectedFood.js";
 import { getGrams } from "./selectGramsQuantity.js";
-import { addEachMeal} from "./addEachMeal.js";
 //import { selectGramsQuantity } from "./selectGramsQuantity.js";
 const input = document.querySelector('#input');
 
@@ -27,11 +26,6 @@ export const clickSendGrams = (input, h1, foodItem) =>{
     })
 }
 
-export const clickAddFood = () =>{
-    document.querySelector('.addFoodButton').addEventListener('click', () =>{
-        addEachMeal();
-    })
-}
 
 /*const test = ()=> {
     const form = document.getElementById('form-submit');

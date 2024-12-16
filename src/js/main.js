@@ -1,6 +1,17 @@
 import { clickSendFoodName, EnterHandlerFoodName} from "./eventHandlers.js";
 import { displayFoodInfo } from "./displayFoodInfo.js";
 
+let currentFoodData = {};
+        
+const updateFoodData = (foodItem, nutritionFacts, grams) => {
+    currentFoodData = {
+        name: foodItem,
+        nutritionData: nutritionFacts,
+        grams
+    };
+};
+export {currentFoodData};
+
 export async function getNutritionData(foodItem, grams) {
     try{
         const response = await fetch('https://trackapi.nutritionix.com/v2/natural/nutrients',{
@@ -20,7 +31,7 @@ export async function getNutritionData(foodItem, grams) {
         const nutritionFacts = data.foods[0]; 
         console.log(nutritionFacts);
         displayFoodInfo(nutritionFacts, foodItem, grams);
-
+        updateFoodData(foodItem, nutritionFacts, grams);
     } catch(error){
         console.error('Hubo un error al obtener los datos:', error);
 

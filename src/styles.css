@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -135,6 +136,7 @@ main {
 }
 .nutritionInfo h2 {
   font-size: 42px;
+  text-align: center;
 }
 .nutritionInfo p {
   width: 100%;
@@ -185,4 +187,129 @@ main {
   align-items: center;
   height: 80%;
   width: 100%;
+}
+
+.newFoodButton {
+  height: 100%;
+  width: 20%;
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: rgb(218, 216, 216);
+}
+.newFoodButton .fa-search {
+  font-size: 20px;
+}
+
+.newFoodButton:hover {
+  background-color: rgb(94, 93, 93);
+  cursor: pointer;
+  color: white;
+}
+.newFoodButton:hover .fa-search {
+  font-size: 25px;
+}
+
+.displayed-all-nutrition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.displayed-all-nutrition h2 {
+  font-size: 2em;
+}
+.displayed-all-nutrition p {
+  justify-content: space-between;
+  margin-bottom: 3%;
+  font-size: 2em;
+}
+.displayed-all-nutrition p span {
+  background-color: rgb(209, 208, 208);
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.display-nutrition-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.restart-button {
+  height: 8%;
+  width: 15%;
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: rgb(218, 216, 216);
+  font-size: 20px;
+}
+
+.restart-button:hover {
+  background-color: rgb(94, 93, 93);
+  cursor: pointer;
+  color: white;
+}
+.restart-button:hover .fa-search {
+  font-size: 25px;
+}
+
+.sumButton {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid rgb(66, 159, 57);
+  border-radius: 10px;
+  color: rgb(31, 112, 31);
+  font-size: 2rem;
+  height: 10%;
+  width: 30%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.sumButton:hover {
+  background-color: rgb(206, 204, 204);
+  color: rgb(206, 249, 206);
+}
+
+.ulList {
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  overflow: auto;
+}
+
+.liElements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between; /* Coloca el texto y el botón separados */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-top: 3%;
+}
+.liElements span {
+  width: 100%;
+  background-color: rgb(209, 208, 208);
+  border-radius: 10px;
+}
+
+.deleteButton {
+  margin-left: 18px; /* Espacio entre el texto y el botón */
+  background-color: #f44336; /* Rojo para resaltar */
+  color: white;
+  font-size: 25px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #ba1515; /* Rojo para resaltar */
 }/*# sourceMappingURL=styles.css.map */
