@@ -12,7 +12,7 @@ const updateFoodData = (foodItem, nutritionFacts, grams) => {
 };
 export {currentFoodData};
 
-export async function getNutritionData(foodItem, grams) {
+export async function getNutritionData(foodItem, grams, errorCallback) {
     try{
         const response = await fetch('https://trackapi.nutritionix.com/v2/natural/nutrients',{
             method: 'POST',
@@ -33,7 +33,9 @@ export async function getNutritionData(foodItem, grams) {
         displayFoodInfo(nutritionFacts, foodItem, grams);
         updateFoodData(foodItem, nutritionFacts, grams);
     } catch(error){
-        console.error('Hubo un error al obtener los datos:', error);
+        if (errorCallback) {
+            errorCallback("Por favor ingresa un alimento valido."); 
+        }
 
     };
 }

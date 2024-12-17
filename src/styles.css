@@ -54,10 +54,12 @@ main {
   width: 100%;
 }
 .searchInfo .input-container {
+  margin-left: auto;
+  align-items: flex-end !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: end;
+  flex-direction: column;
   height: 80%;
   width: 70%;
 }
@@ -68,6 +70,7 @@ main {
   border: 2px solid white;
   text-align: center;
   font-size: x-large;
+  flex-shrink: 0;
 }
 .searchInfo .inputGrams {
   height: 100%;
@@ -312,4 +315,10 @@ main {
 
 .deleteButton:hover {
   background-color: #ba1515; /* Rojo para resaltar */
+}
+
+.error-message {
+  color: rgb(222, 8, 8);
+  font-size: 20px;
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
