@@ -8,11 +8,3 @@ export const getSelectedFood = (foodItem) =>{
     input.value = '';
     selectGramsQuantity(foodItem);
 }
-
-const foodNotFound = () =>{
-    input.addEventListener('submit')
-    if(foodItem !== input.value){
-        input.classList.add();
-
-    }
-}

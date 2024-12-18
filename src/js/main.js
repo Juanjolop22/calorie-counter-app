@@ -1,6 +1,6 @@
-import { clickSendFoodName, EnterHandlerFoodName} from "./eventHandlers.js";
-import { displayFoodInfo } from "./displayFoodInfo.js";
-
+/*import { clickSendFoodName, EnterHandlerFoodName} from "./eventHandlers.js";
+import { displayFoodInfo } from "./displayFoodInfo.js";*/
+import { appForm } from "./eventHandlers.js";
 let currentFoodData = {};
         
 const updateFoodData = (foodItem, nutritionFacts, grams) => {
@@ -39,6 +39,6 @@ export async function getNutritionData(foodItem, grams, errorCallback) {
 
     };
 }
-
-clickSendFoodName();
-EnterHandlerFoodName();
+appForm();
+/*clickSendFoodName();
+EnterHandlerFoodName();*/

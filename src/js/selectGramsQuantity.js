@@ -1,5 +1,5 @@
 import { getNutritionData } from "./main.js";
-import { clickSendGrams} from "./eventHandlers.js";
+/*import { clickSendGrams} from "./eventHandlers.js";*/
 
 export const selectGramsQuantity = (foodItem) =>{
     if(!foodItem) return
@@ -10,8 +10,8 @@ export const selectGramsQuantity = (foodItem) =>{
     const input = document.querySelector('#input');
     input.classList.add('inputGrams');
     input.placeholder = 'Ingresa los gramos'
-    replaceButton(input, h1, foodItem);
-    clickSendGrams(input, h1, foodItem);
+    /*replaceButton(input, h1, foodItem);
+    clickSendGrams(input, h1, foodItem);*/
 }
 
 export const getGrams = (input, h1, foodItem) =>{
@@ -28,7 +28,7 @@ export const getGrams = (input, h1, foodItem) =>{
         });
 }
 
-const replaceButton = () =>{
+/*const replaceButton = () =>{
     const button = document.querySelector('button');
     const buttonGrams = document.createElement('button');
     buttonGrams.innerHTML = '<i class="fas fa-search"></i>';
@@ -38,7 +38,7 @@ const replaceButton = () =>{
     } else {
         console.error('No se encontró el botón para reemplazar.');
     }
-}
+}*/
 
 const displayErrorMessage = (input, error) =>{
     let errorMessage = document.querySelector('.error-message');
@@ -47,7 +47,6 @@ const displayErrorMessage = (input, error) =>{
         errorMessage.classList.add('error-message');
         input.parentNode.appendChild(errorMessage)
     }
-
     errorMessage.innerHTML = error; 
 };
 
