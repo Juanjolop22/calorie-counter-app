@@ -320,4 +320,21 @@ form {
   color: rgb(222, 8, 8);
   font-size: 20px;
   display: block;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3em !important;
+    text-align: center;
+  }
+  #food-form #input {
+    height: 100%;
+    width: 75%;
+    font-size: 1.2em;
+  }
+  #food-form #button {
+    height: 100%;
+    width: 25%;
+    margin-left: 5%;
+  }
 }/*# sourceMappingURL=styles.css.map */

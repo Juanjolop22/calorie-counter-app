@@ -285,5 +285,24 @@ form{
     display: block;
 }
 
+@media (max-width: 480px){
+    h1{
+        font-size: 1.3em !important;
+        text-align: center;
+    }
+    #food-form{
+        #input{
+            @include heightAndWidth(100%, 75%);
+            font-size: 1.2em;
+    } 
+    #button{
+        @include heightAndWidth(100%, 25%);
+        margin-left: 5%;
+    }
+
+    }
+
+}
+
 
 
