@@ -19,7 +19,7 @@ export const selectGramsQuantity = (foodItem) =>{
 export const getGrams = (input, h1, foodItem) =>{
         const grams = parseFloat(input.value);
         if (isNaN(grams)) return
-        /*clearErrorMessage(input);*/
+        clearErrorMessage(input);
         input.value = '';
         input.placeholder = 'Ingresa un alimento';
         input.classList.remove('inputGrams');
@@ -48,8 +48,8 @@ const displayErrorMessage = (input, error) =>{
         errorMessage = document.createElement('p');
         errorMessage.classList.add('error-message');
         input.parentNode.appendChild(errorMessage)
+        errorMessage.innerHTML = error; 
     }
-    errorMessage.innerHTML = error; 
 };
 
 const clearErrorMessage = (input) => {

@@ -53,9 +53,13 @@ main {
   height: 80%;
   width: 100%;
 }
-.searchInfo #input {
+.searchInfo .input-container {
   height: 100%;
   width: 60%;
+}
+.searchInfo .input-container #input {
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
   border: 2px solid white;
   text-align: center;
@@ -320,21 +324,56 @@ form {
   color: rgb(222, 8, 8);
   font-size: 20px;
   display: block;
+  text-align: center;
 }
 
 @media (max-width: 480px) {
   h1 {
     font-size: 1.3em !important;
     text-align: center;
+    margin: 0px 10px;
   }
-  #food-form #input {
+  #food-form .input-container {
     height: 100%;
     width: 75%;
+  }
+  #food-form .input-container #input {
+    height: 100%;
+    width: 100%;
     font-size: 1.2em;
+  }
+  #food-form .error-message {
+    font-size: 15px;
   }
   #food-form #button {
     height: 100%;
     width: 25%;
     margin-left: 5%;
   }
+  .secondContainer {
+    height: 80%;
+    width: 100%;
+  }
+  .secondContainer .secondSonContainer {
+    height: 100%;
+    width: 100%;
+    margin: 0px 2%;
+    overflow: hidden;
+  }
+  .secondContainer .secondSonContainer h2 {
+    font-size: 27px;
+  }
+  .secondContainer .secondSonContainer p {
+    font-size: 0.8em;
+    margin-bottom: 3%;
+  }
+  .secondContainer .secondSonContainer .addFoodButton {
+    height: 9%;
+    width: 45%;
+    font-size: 1.3rem;
+    margin: 5px 0px;
+  }
+  /*.secondContainer::-webkit-scrollbar{
+      display: none;
+  }*/
 }/*# sourceMappingURL=styles.css.map */
