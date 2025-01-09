@@ -53,69 +53,68 @@ main {
   height: 80%;
   width: 100%;
 }
-.searchInfo .input-container {
-  margin-left: auto;
-  align-items: flex-end !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 80%;
-  width: 70%;
-}
-.searchInfo .input-container #input {
+.searchInfo #input {
   height: 100%;
-  width: 65%;
+  width: 60%;
   border-radius: 15px;
   border: 2px solid white;
   text-align: center;
   font-size: x-large;
   flex-shrink: 0;
 }
-.searchInfo .inputGrams {
+
+.inputGrams {
   height: 100%;
-  width: 30% !important;
+  width: 60%;
 }
-.searchInfo .button-container {
-  height: 80%;
-  width: 30%;
-  margin-left: 2%;
-}
-.searchInfo .button-container #button {
+
+#button {
   height: 100%;
-  width: 20%;
+  width: 7%;
+  border: 2px solid white;
+  border-radius: 15px;
+  background-color: rgb(218, 216, 216);
+  margin-left: 3%;
+}
+#button .fa-search {
+  font-size: 20px;
+}
+
+.button-grams {
+  height: 100%;
+  width: 10%;
   border: 2px solid white;
   border-radius: 15px;
   background-color: rgb(218, 216, 216);
 }
-.searchInfo .button-container #button .fa-search {
+.button-grams .fa-search {
   font-size: 20px;
 }
-.searchInfo .button-grams {
-  height: 100%;
-  width: 20%;
-  border: 2px solid white;
-  border-radius: 15px;
-  background-color: rgb(218, 216, 216);
-}
-.searchInfo .button-grams .fa-search {
-  font-size: 20px;
-}
-.searchInfo #button:hover {
+
+#button:hover {
   background-color: rgb(94, 93, 93);
   cursor: pointer;
   color: white;
 }
-.searchInfo #button:hover .fa-search {
+#button:hover .fa-search {
   font-size: 25px;
 }
-.searchInfo .button-grams:hover {
+
+.button-grams:hover {
   background-color: rgb(94, 93, 93);
   cursor: pointer;
   color: white;
 }
-.searchInfo .button-grams:hover .fa-search {
+.button-grams:hover .fa-search {
   font-size: 25px;
+}
+
+form {
+  height: 60%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .secondSonContainer {

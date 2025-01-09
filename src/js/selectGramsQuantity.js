@@ -25,9 +25,9 @@ export const getGrams = (input, h1, foodItem) =>{
         input.classList.remove('inputGrams');
         h1.classList.remove('foodTitle');
         h1.innerHTML = 'Calcula las calorias de lo que vas a comer.';
-        getNutritionData(foodItem, grams); /*(error) => {
+        getNutritionData(foodItem, grams,(error) => {
             displayErrorMessage(input, error);
-        });*/
+        });
 }
 
 /*const replaceButton = () =>{
