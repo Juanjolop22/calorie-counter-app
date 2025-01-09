@@ -1,6 +1,7 @@
 import { addEachMeal } from "./addEachMeal.js";
-import { getSelectedFood } from "./getSelectedFood.js";
+/*import { getSelectedFood } from "./getSelectedFood.js";*/
 export const displayFoodInfo = (nutritionFacts, foodItem, grams) =>{
+    
     const portionsPerFoodItem = nutritionFacts.serving_weight_grams;
     const format = (value) => value.toFixed(2);
     const nutrientsInfo = document.querySelector('.secondSonContainer');
@@ -20,7 +21,7 @@ export const displayFoodInfo = (nutritionFacts, foodItem, grams) =>{
                              </div>`;
                              
     addFoodToListButton(nutrientsInfo, addEachMeal, foodItem, grams);
-    newFoodButton(foodItem);
+    /*newFoodButton(foodItem);*/
 
 }
 
@@ -36,7 +37,7 @@ const addFoodToListButton = (nutrientsInfo, callBack, foodItem, grams) =>{
 
 }
 
-const newFoodButton = (foodItem) =>{
+/*const newFoodButton = (foodItem) =>{
     const createNewFoodButton = document.createElement('button');
     createNewFoodButton.classList.add('newFoodButton');
     createNewFoodButton.innerHTML = '<i class="fas fa-search"></i>';
@@ -46,7 +47,7 @@ const newFoodButton = (foodItem) =>{
     const existCreateNewfoodButton = document.querySelector('.newFoodButton');
     if (existCreateNewfoodButton) return
     document.querySelector('.button-grams').replaceWith(createNewFoodButton);
-}
+}*/
 
     
 

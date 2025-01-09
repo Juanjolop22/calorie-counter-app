@@ -2,6 +2,8 @@ import { getNutritionData } from "./main.js";
 /*import { clickSendGrams} from "./eventHandlers.js";*/
 
 export const selectGramsQuantity = (foodItem) =>{
+    console.log(foodItem);
+    
     if(!foodItem) return
     const h1 = document.querySelector('h1');
     h1.classList.add('foodTitle');
@@ -17,15 +19,15 @@ export const selectGramsQuantity = (foodItem) =>{
 export const getGrams = (input, h1, foodItem) =>{
         const grams = parseFloat(input.value);
         if (isNaN(grams)) return
-        clearErrorMessage(input);
+        /*clearErrorMessage(input);*/
         input.value = '';
         input.placeholder = 'Ingresa un alimento';
         input.classList.remove('inputGrams');
         h1.classList.remove('foodTitle');
         h1.innerHTML = 'Calcula las calorias de lo que vas a comer.';
-        getNutritionData(foodItem, grams, (error) => {
+        getNutritionData(foodItem, grams); /*(error) => {
             displayErrorMessage(input, error);
-        });
+        });*/
 }
 
 /*const replaceButton = () =>{

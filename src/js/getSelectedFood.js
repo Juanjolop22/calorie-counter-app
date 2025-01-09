@@ -1,4 +1,4 @@
-import { selectGramsQuantity } from "./selectGramsQuantity.js";
+/*import { selectGramsQuantity } from "./selectGramsQuantity.js";*/
 
 export const getSelectedFood = (foodItem) =>{
     const input = document.querySelector('#input');
@@ -6,5 +6,6 @@ export const getSelectedFood = (foodItem) =>{
     if (!foodItem) return
     console.log(foodItem)
     input.value = '';
-    selectGramsQuantity(foodItem);
+    return foodItem
+    /*selectGramsQuantity(foodItem); */
 }
