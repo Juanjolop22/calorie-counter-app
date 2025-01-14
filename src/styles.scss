@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 @mixin make-flex{
     display: flex;
     justify-content: center;
@@ -20,16 +19,15 @@
 }
 
 html{
-    @include heightAndWidth(100%, 100%);
-    body{
-    @include heightAndWidth(100%, 100%);
-    font-family: 'Poppins', sans-serif;
-    }
+    @include gradient(45deg, rgb(221, 252, 221), rgb(243, 240, 240));
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+    }
+
 main{
-    @include make-flex();
-    @include heightAndWidth(100%, 100%);
+    height: 100vh;
 }
 
 .container{
@@ -114,17 +112,16 @@ form{
 }
 .secondSonContainer{
     @include make-flex();
-    @include heightAndWidth(80%, 50%);
+    @include heightAndWidth(100%, 50%);
     flex-direction: column;
     font-size: 2em;
     }
     .nutritionInfo{
-        display: block;
         margin-left: 2%;
         text-align: left;
         @include heightAndWidth(90%, 100%);
         flex-direction: column;
-        overflow: auto;
+        overflow: hidden;
         h2{
             font-size:42px;
             text-align: center;
@@ -157,18 +154,21 @@ form{
 }
 
 .meal-list{
+    justify-content: start;
+    @include heightAndWidth(80vh, 50%);
+    @include make-flex();
+    flex-direction: column;
     h3{
         font-size:42px;
     }
     font-size: 2em;
-    @include heightAndWidth(80%, 50%);
-    @include make-flex();
-    flex-direction: column;
-    justify-content: start;
+
 }
 .secondContainer{
     @include make-flex();
-    @include heightAndWidth(80%, 100%);
+    align-items: stretch;
+
+    @include heightAndWidth(100%, 100%);
 }
 .newFoodButton{
     @include heightAndWidth(100%, 20%);
@@ -207,6 +207,7 @@ form{
     }
 }
 .display-nutrition-container{
+    margin-top: 2px;
     @include make-flex();
     flex-direction: column;
     overflow-y: auto;
@@ -250,8 +251,7 @@ form{
     flex-direction: column;
     @include make-flex();
     justify-content: start;
-    overflow: auto;
-    
+    overflow-y: auto;
 }
 
 
@@ -291,6 +291,10 @@ form{
 }
 
 @media (max-width: 480px){
+    .container{
+        min-height: 100vh;
+    }
+
     h1{
         font-size: 1.3em !important;
         text-align: center;
@@ -312,28 +316,80 @@ form{
             margin-left: 5%;
         }
     }
+
     .secondContainer{
-    @include heightAndWidth(80%, 100%);
+        @include heightAndWidth(80vh, 100%);
+        flex-direction: column;
+        justify-content: start;
+
+
 
        .secondSonContainer{
-           @include heightAndWidth(100%, 100%);
-           margin: 0px 2%;
-           overflow: hidden;
+           @include heightAndWidth(80vh, 100%);
+           overflow-x: hidden;
+
+
+           .nutritionInfo{
+            height: 100%;
+            overflow-y: auto;
+
+           }
            h2{
-            font-size: 27px;
+            font-size: 0.7em;
+            margin-bottom: 3%;
+            margin: 0px 5px;
            }
            p{
-            font-size: 0.8em;
+            font-size: 0.7em;
             margin-bottom: 3%;
            }
            .addFoodButton{
-           @include heightAndWidth(9%, 45%);
-           font-size: 1.3rem;
-           margin: 5px 0px;
-           
+           @include heightAndWidth(10%, 45%);
+           font-size: 1.2rem;
+           margin-top: 7px;
+
            }
        }
+       .meal-list{
+        width: 100%;
+        overflow-y: auto; 
+        max-height: 40vh;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 1.4em;
+        h3{
+            font-size: 21px ;
+        }
+        .sumButton{
+            font-size: 1.1rem;
+            @include heightAndWidth(25%, 40%);
+
+        }
+        .ulList{
+            @include heightAndWidth(80vh, 100%);
+
+        }
+       }
+       
+       .display-nutrition-container{
+            margin-top: 3%;
+            h2{
+                font-size: 1.3em;
+                margin-bottom: 1%;
+            }
+            p{
+                font-size: 1.2em;
+            }
+
+       }
+       .restart-button{
+        margin-top: 2%;
+        font-size: 1.1em;
+        @include heightAndWidth(10%, 40%);
+       }
+       
     }
+
     
     /*.secondContainer::-webkit-scrollbar{
         display: none;

@@ -12,8 +12,7 @@ export const selectGramsQuantity = (foodItem) =>{
     const input = document.querySelector('#input');
     input.classList.add('inputGrams');
     input.placeholder = 'Ingresa los gramos'
-    /*replaceButton(input, h1, foodItem);
-    clickSendGrams(input, h1, foodItem);*/
+
 }
 
 export const getGrams = (input, h1, foodItem) =>{
@@ -47,7 +46,7 @@ const displayErrorMessage = (input, error) =>{
     if (!errorMessage) {
         errorMessage = document.createElement('p');
         errorMessage.classList.add('error-message');
-        input.parentNode.appendChild(errorMessage)
+        input.parentNode.appendChild(errorMessage);
         errorMessage.innerHTML = error; 
     }
 };
