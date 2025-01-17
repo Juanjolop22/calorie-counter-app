@@ -46,7 +46,7 @@ const displayErrorMessage = (input, error) =>{
     if (!errorMessage) {
         errorMessage = document.createElement('p');
         errorMessage.classList.add('error-message');
-        input.parentNode.appendChild(errorMessage);
+        input.parentNode.insertBefore(errorMessage, input);
         errorMessage.innerHTML = error; 
     }
 };

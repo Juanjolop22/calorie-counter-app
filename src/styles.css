@@ -44,7 +44,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 .searchInfo .input-container {
@@ -108,7 +108,7 @@ main {
 }
 
 form {
-  height: 60%;
+  height: 90%;
   width: 70%;
   display: flex;
   justify-content: center;
@@ -158,7 +158,7 @@ form {
   font-size: 2rem;
   height: 10%;
   width: 30%;
-  margin-top: 5%;
+  margin: 2% 0px;
 }
 
 .addFoodButton:hover {
@@ -317,9 +317,12 @@ form {
 
 .error-message {
   color: rgb(222, 8, 8);
-  font-size: 20px;
+  font-size: 15px;
   display: block;
   text-align: center;
+  position: absolute;
+  top: 72px;
+  left: 38%;
 }
 
 @media (max-width: 480px) {
@@ -331,7 +334,12 @@ form {
     text-align: center;
     margin: 0px 10px;
   }
+  #food-form {
+    height: 65%;
+    width: 70%;
+  }
   #food-form .input-container {
+    position: relative;
     height: 100%;
     width: 75%;
   }
@@ -341,7 +349,11 @@ form {
     font-size: 1.2em;
   }
   #food-form .error-message {
-    font-size: 15px;
+    font-size: 14px;
+    height: 100%;
+    width: 70vw;
+    top: -16px;
+    left: 7px;
   }
   #food-form #button {
     height: 100%;
@@ -383,6 +395,7 @@ form {
     overflow-y: auto;
     max-height: 40vh;
     margin-top: 15px;
+    margin-bottom: 12px;
     text-align: center;
     font-size: 1.4em;
   }
@@ -414,7 +427,100 @@ form {
     height: 10%;
     width: 40%;
   }
-  /*.secondContainer::-webkit-scrollbar{
-      display: none;
-  }*/
+}
+@media (min-width: 380px) and (max-width: 480px) {
+  #food-form {
+    height: 40%;
+    width: 70%;
+  }
+  #input {
+    font-size: 1.3em !important;
+  }
+  .searchInfo {
+    margin-top: 0px;
+    height: 70%;
+  }
+  .nutritionInfo {
+    height: 80% !important;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    height: auto;
+  }
+  .firstSonContainer {
+    height: 20vh;
+  }
+  .container {
+    min-height: 100vh;
+  }
+  .secondContainer {
+    flex: 1;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 0;
+  }
+  .searchInfo {
+    height: 60%;
+  }
+  .searchInfo #food-form {
+    height: 50%;
+  }
+  .searchInfo #button {
+    width: 15%;
+  }
+  .secondSonContainer {
+    height: 70vh;
+    width: 85%;
+  }
+  .secondSonContainer p {
+    font-size: 1.1em;
+    margin-bottom: 4%;
+  }
+  .nutritionInfo {
+    height: 80%;
+    overflow-y: auto;
+  }
+  .addFoodButton {
+    height: 7%;
+    width: 45%;
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  .sumButton {
+    height: 8%;
+    width: 46%;
+    font-size: 1.4rem;
+    margin-top: 30px;
+  }
+  .meal-list {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .meal-list .ulList {
+    font-size: 1.4em;
+  }
+  .meal-list .ulList li .deleteButton {
+    font-size: 0.9em;
+  }
+  .display-nutrition-container {
+    margin-top: 3%;
+  }
+  .display-nutrition-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 1%;
+  }
+  .display-nutrition-container p {
+    font-size: 1.8em;
+  }
+  .displayed-all-nutrition {
+    justify-content: start;
+  }
+  .restart-button {
+    margin-top: 2%;
+    font-size: 1.77em;
+    height: 50%;
+    width: 30%;
+  }
 }/*# sourceMappingURL=styles.css.map */
