@@ -413,7 +413,7 @@ form{
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     main{
         height: auto;
     }
@@ -464,7 +464,6 @@ form{
         @include heightAndWidth(8%, 46%);
         font-size: 1.4rem;
         margin-top: 30px;
-
     }
     .meal-list{
         width: 80%;
@@ -496,8 +495,72 @@ form{
     @include heightAndWidth(50%, 30%);
 
    }
+}
 
+@media (min-width: 769px) and (max-width: 1024px){
+    main{
+        height: auto;
+    }
+    .container{
+        min-height: 100vh;
+    }
+    .firstSonContainer{
+        height: 16vh;
+        #button{
+            width: 14%;
+        }
+    }
+    .secondContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondSonContainer{
+        @include heightAndWidth(80vh, 90%);
+        .nutritionInfo{
+            height: 80%;
+            overflow-y: auto;
+        }
+        p{
+            font-size: 1.1em;
+            margin-bottom: 4%;
+        }
 
+        h2{
+            margin-bottom: 10px;
+
+        }   
+        .addFoodButton{
+            @include heightAndWidth(7%, 40%);
+            font-size: 1.4rem;
+            margin-top: 20px;
+        }   
+    }
+    .meal-list{
+        width: 90%;
+        text-align: center;
+        margin-bottom: 25px;
+        .ulList{
+            font-size: 1.3em;
+            li .deleteButton{
+                font-size: 0.8em;
+            }
+        }
+        .sumButton{
+            @include heightAndWidth(10%, 40%);
+            font-size: 1.4rem;
+            margin-top: 20px;
+
+        }
+    }
+    .displayed-all-nutrition{
+         height: auto;
+         justify-content: start;
+         font-size: 0.8em;
+         .restart-button{
+            margin: 2% 0px;
+            width: 20%;
+         }
+       }
 
 }
 

@@ -444,7 +444,7 @@ form {
     height: 80% !important;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   main {
     height: auto;
   }
@@ -522,5 +522,70 @@ form {
     font-size: 1.77em;
     height: 50%;
     width: 30%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    height: auto;
+  }
+  .container {
+    min-height: 100vh;
+  }
+  .firstSonContainer {
+    height: 16vh;
+  }
+  .firstSonContainer #button {
+    width: 14%;
+  }
+  .secondContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .secondSonContainer {
+    height: 80vh;
+    width: 90%;
+  }
+  .secondSonContainer .nutritionInfo {
+    height: 80%;
+    overflow-y: auto;
+  }
+  .secondSonContainer p {
+    font-size: 1.1em;
+    margin-bottom: 4%;
+  }
+  .secondSonContainer h2 {
+    margin-bottom: 10px;
+  }
+  .secondSonContainer .addFoodButton {
+    height: 7%;
+    width: 40%;
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+  .meal-list {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .meal-list .ulList {
+    font-size: 1.3em;
+  }
+  .meal-list .ulList li .deleteButton {
+    font-size: 0.8em;
+  }
+  .meal-list .sumButton {
+    height: 10%;
+    width: 40%;
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+  .displayed-all-nutrition {
+    height: auto;
+    justify-content: start;
+    font-size: 0.8em;
+  }
+  .displayed-all-nutrition .restart-button {
+    margin: 2% 0px;
+    width: 20%;
   }
 }/*# sourceMappingURL=styles.css.map */
