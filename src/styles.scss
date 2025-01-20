@@ -79,25 +79,8 @@ main{
                 font-size: 20px;
             }
      }
-    
-    .button-grams{
-        @include heightAndWidth(100%, 10%);
-        border: 2px solid white ;
-        border-radius: 15px;
-        background-color: rgb(218, 216, 216);
-        .fa-search{
-            font-size: 20px;
-        }
-    }
+
     #button:hover{
-        background-color: rgb(94, 93, 93);
-        cursor: pointer;
-        color: white;
-        .fa-search{
-            font-size: 25px;
-        }
-    }
-    .button-grams:hover{
         background-color: rgb(94, 93, 93);
         cursor: pointer;
         color: white;
@@ -169,23 +152,7 @@ form{
     align-items: stretch;
     @include heightAndWidth(100%, 100%);
 }
-.newFoodButton{
-    @include heightAndWidth(100%, 20%);
-    border: 2px solid white ;
-    border-radius: 15px;
-    background-color: rgb(218, 216, 216);
-    .fa-search{
-        font-size: 20px;
-    }
-}
-.newFoodButton:hover{
-    background-color: rgb(94, 93, 93);
-    cursor: pointer;
-    color: white;
-    .fa-search{
-        font-size: 25px;
-    }
-}
+
 
 .displayed-all-nutrition{
     @include make-flex();
@@ -562,6 +529,73 @@ form{
          }
        }
 
+}
+
+@media (min-width: 1024px) and (max-width: 1874px){
+    main{
+        height: auto;
+    }
+    .searchInfo{
+        margin-top: 5px;
+    }
+
+    .firstSonContainer{
+        height: 20vh;
+        h1{
+            font-size: 1.7rem;
+        }
+        #food-form{
+           width: 60%;
+           height: 80%;
+        }
+        #button{
+           width: 10%;
+        }
+    }
+    #input{
+        font-size: 1.3em !important;
+    }
+    .secondContainer{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1%;
+        .secondSonContainer{
+            font-size: 1.7em;
+            h2{
+                font-size: 32px;
+                margin: 1% 0px;
+            }
+            .nutritionInfo{
+               p{
+                 margin-bottom: 2%;
+               }
+            }
+        }
+        .addFoodButton{
+            font-size: 1.2rem;
+            height: 2em;
+            @include heightAndWidth(2em, 35%);
+            margin:4% 0px;
+        }
+
+        .meal-list{
+            height: auto;
+            text-align: center;
+            margin-bottom: 3%;
+            h3{
+                font-size: 35px;
+            }
+            .sumButton{
+               @include heightAndWidth(1.9em, 34%);
+               font-size: 1.3rem;
+               margin-top: 4%;
+            }
+        }
+        .restart-button{
+            margin-bottom: 2%;
+        }
+
+    }
 }
 
 
