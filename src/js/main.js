@@ -1,5 +1,4 @@
-/*import { clickSendFoodName, EnterHandlerFoodName} from "./eventHandlers.js";
-import { displayFoodInfo } from "./displayFoodInfo.js";*/
+
 import { displayFoodInfo } from "./displayFoodInfo.js";
 import { appForm } from "./eventHandlers.js";
 let currentFoodData = {};
