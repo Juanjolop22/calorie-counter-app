@@ -41,5 +41,4 @@ export async function getNutritionData(foodItem, grams, errorCallback) {
     };
 }
 appForm();
-/*clickSendFoodName();
-EnterHandlerFoodName();*/
+

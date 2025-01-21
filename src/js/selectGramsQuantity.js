@@ -12,7 +12,6 @@ export const selectGramsQuantity = (foodItem) =>{
     const input = document.querySelector('#input');
     input.classList.add('inputGrams');
     input.placeholder = 'Ingresa los gramos'
-
 }
 
 export const getGrams = (input, h1, foodItem) =>{
@@ -28,19 +27,6 @@ export const getGrams = (input, h1, foodItem) =>{
             displayErrorMessage(input, error);
         });
 }
-
-/*const replaceButton = () =>{
-    const button = document.querySelector('button');
-    const buttonGrams = document.createElement('button');
-    buttonGrams.innerHTML = '<i class="fas fa-search"></i>';
-    buttonGrams.classList.add('button-grams');
-    if (button) {
-        button.replaceWith(buttonGrams);
-    } else {
-        console.error('No se encontró el botón para reemplazar.');
-    }
-}*/
-
 const displayErrorMessage = (input, error) =>{
     let errorMessage = document.querySelector('.error-message');
     if (!errorMessage) {

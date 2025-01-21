@@ -20,7 +20,6 @@ export const displayFoodInfo = (nutritionFacts, foodItem, grams) =>{
                              </div>`;
                              
     addFoodToListButton(nutrientsInfo, addEachMeal, foodItem, grams);
-
 }
 
 const addFoodToListButton = (nutrientsInfo, callBack, foodItem, grams) =>{
@@ -32,7 +31,6 @@ const addFoodToListButton = (nutrientsInfo, callBack, foodItem, grams) =>{
 
     });
     nutrientsInfo.append(buttonAddFood);
-
 }
 
 

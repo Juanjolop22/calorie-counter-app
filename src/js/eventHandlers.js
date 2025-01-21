@@ -18,49 +18,11 @@ export const appForm = () =>{
                 currentState = 'grams';
                 console.log(currentState);
             }
-            
+
         }else if (currentState === 'grams' && input.value !== '') {
             getGrams(input, h1, foodItem);   
             currentState = 'food';
         }
-    
-    })
-
-}
-
-/*export const clickSendFoodName = () =>{
-    document.querySelector('#button').addEventListener('click', () => {
-        
-        if(input.value === '')return
-        getSelectedFood();
-         })
- }
-
- export const EnterHandlerFoodName = () =>{
-        input.addEventListener("keydown", (event) =>{
-        if(input.value === '') return
-        if(event.key === "Enter"){
-        getSelectedFood();
-        }
-     })
- }
-
-export const clickSendGrams = (input, h1, foodItem) =>{
-    document.querySelector('.button-grams').addEventListener('click', () =>{
-        getGrams(input, h1, foodItem);
-    })
-}*/
-
-
-/*const test = ()=> {
-    const form = document.getElementById('form-submit');
-    if(!form) return;
-
-    form.addEventListener('submit', (e)=> {
-        e.preventDefault();
-        console.log('submited');
-        
     })
 }
 
-test();*/
