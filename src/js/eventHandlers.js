@@ -1,6 +1,5 @@
 import {getSelectedFood } from "./getSelectedFood.js";
 import { getGrams, selectGramsQuantity } from "./selectGramsQuantity.js";
-//import { selectGramsQuantity } from "./selectGramsQuantity.js";
 const input = document.querySelector('#input');
 const h1 = document.querySelector('h1');
 const form = document.querySelector('#food-form');

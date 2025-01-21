@@ -1,5 +1,4 @@
 import { getNutritionData } from "./main.js";
-/*import { clickSendGrams} from "./eventHandlers.js";*/
 
 export const selectGramsQuantity = (foodItem) =>{
     console.log(foodItem);
